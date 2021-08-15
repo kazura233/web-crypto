@@ -36,7 +36,6 @@ export default {
   ],
   external: makeExternalPredicate([
     ...Object.keys(pkg.peerDependencies || {}),
-    ...Object.keys(pkg.devDependencies || {}),
     ...Object.keys(pkg.dependencies || {}),
   ]),
   plugins: [

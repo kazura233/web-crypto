@@ -5,7 +5,7 @@ export interface Certificate {
   pubkey: string
 }
 
-const Rsa1024 = {
+export const Rsa1024 = {
   encrypt(str: string, pubkey: string) {
     const rsa = new JSEncrypt({})
     rsa.setPublicKey(pubkey)
@@ -23,5 +23,3 @@ const Rsa1024 = {
     return { privkey, pubkey }
   },
 }
-
-export default Rsa1024
